@@ -1,0 +1,116 @@
+<html>
+<head>
+<title>STelescope</title>
+<link rel='stylesheet' href='/stylesheets/bootstrap.css' />
+<style type="text/css">
+body {
+padding-top: 60px;
+padding-bottom: 40px;
+}
+</style>
+<link href="stylesheets/bootstrap-responsive.css" rel="stylesheet">
+<script type="text/javascript">
+  var m_id = 2,g_id=2;
+  function addmeaning(){
+    var p_meaning=document.getElementById("m_meaning");
+    var m_input=document.createElement("input");
+    var m_div=document.createElement("div");
+    var sm_id = m_id.toString();
+    m_div.id = "m_div"+ sm_id;
+    m_div.innerHTML=sm_id+". ";
+    m_div.class = "controls";
+    m_input.type="text";
+    m_input.id="meaning"+sm_id;
+    m_input.className="input-xlarge";
+    m_input.onclick = function(){deletemeaning(m_div)};
+    m_div.appendChild(m_input);
+    p_meaning.appendChild(m_div);
+    m_id = m_id + 1;
+  };
+  function deletemeaning(mv_id){
+      var g_meaning=document.getElementById("m_meaning");
+      g_meaning.removeChild(mv_id);
+      m_id = m_id - 1;
+  };
+  function addgroup(){
+    var g_group=document.getElementById("g_group");
+    var g_input=document.createElement("input");
+    var g_div=document.createElement("div");
+    var sg_id = g_id.toString();
+    g_div.id = "d_div"+ sg_id;
+    g_div.innerHTML=sg_id+". ";
+    g_div.class = "controls";
+    g_input.type="text";
+    g_input.id="group"+sg_id;
+    g_input.className="input-xlarge";
+    g_input.onclick = function(){deletegroup(g_div)};
+    g_div.appendChild(g_input);
+    g_group.appendChild(g_div);
+    g_id = g_id + 1;
+  };
+  function deletegroup(gv_id){
+      var g_meaning=document.getElementById("g_group");
+      g_meaning.removeChild(gv_id);
+      g_id = g_id - 1;
+  }
+</script>
+
+</head>
+<body>
+<div class="navbar navbar-fixed-top navbar-inverse">
+<div class="navbar-inner">
+<div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</a>
+<a class="brand" href="/">DEIH</a>
+<div class="nav-collapse">
+<ul class="nav">
+
+<li class="active"><a href="/">首页</a></li>
+<li><a href="/login">添加单词</a></li>
+<li><a href="/reg">复习单词</a></li>
+<li><a href="/reg">查找单词</a></li>
+<li><a href="/reg">管理单词</a></li>
+<li><a href="/logout">登出</a></li>
+
+</ul>
+
+
+</div>
+</div>
+</div>
+</div>
+<div id="container" class="container-fluid">
+	<div class="row-fluid">
+    <div class="span2">
+      <!--Sidebar content-->
+      <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+              <li class="nav-header">站点导航</li>
+              <li class="active">
+              <li><a href="/">首页</a></li>
+              <li><a href="/square">广场</a></li>
+              <li><a href="/talkgroup">话题圈</a></li>
+              <li><a href="/news">新闻</a></li>
+              <li><a href="/school">学校</a></li>
+            </ul>
+          </div>
+    </div>
+    <div class="span10">
+      <!--Body content-->
+      <%- message %>
+      <%- body %>
+    </div>
+  </div>
+<hr />
+<footer>
+<a href="">DEIH</a>
+</footer>
+</div>
+</body>
+<script src="/javascripts/jquery.js"></script>
+<script src="/javascripts/bootstrap.js"></script>
+</html>

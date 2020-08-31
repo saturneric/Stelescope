@@ -1,0 +1,10 @@
+
+<div class="page-header">
+  <h1>广场   <small>天文爱好者们的谈天说地的地方</small></h1>
+</div>
+<% if (iflogin) { %>
+<form method="post" action="/square" class="well form-inline center" >
+<input type="text" class="span8" name="post">
+<button type="submit" class="btn btn-success"><i class="icon-comment icon-white">
+</i> 发言</button> </form>
+<% } %>

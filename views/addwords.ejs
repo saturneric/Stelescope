@@ -1,0 +1,50 @@
+
+<form class="form-horizontal" method="post" action="/addwords">
+<fieldset>
+<legend>添加单词</legend>
+<div class="control-group">
+<label class="control-label" for="w_name">单词</label>
+<div class="controls">
+<input type="text" class="input-xlarge" id="w_name" name="w_name">
+<p class="help-block"></p>
+</div>
+</div>
+<div class="control-group">
+<label class="control-label" for="pop">词性</label>
+<div class="controls">
+<input name="pop" type="checkbox" value="n." /> n.
+<input name="pop" type="checkbox" value="vt." /> vt.
+<input name="pop" type="checkbox" value="vi." /> vi.
+<input name="pop" type="checkbox" value="a." /> a.
+<input name="pop" type="checkbox" value="adj." /> adj.
+<input name="pop" type="checkbox" value="adv." /> adv.
+<input name="pop" type="checkbox" value="prep." /> prep.
+<input name="pop" type="checkbox" value="prson." /> pron.
+<p class="help-block"></p>
+</div>
+</div>
+<div class="control-group">
+<div class="control-group">
+<label class="control-label" for="meaning">意思</label>
+<div class="controls">
+<input type="text" id="meaning" class="input-xlarge" name = "meaning">
+<p class="help-block">如果不止一种意思，请用分号隔开</p>
+</div>
+</div>
+<div class="control-group">
+<label class="control-label" for="passwordrepeat">词组</label>
+<div class="controls">
+<input type="text" id="groups" class="input-xlarge" name = "group1">
+</div>
+</div>
+<div class="control-group">
+<label class="control-label" for="passwordrepeat">例句</label>
+<div class="controls">
+<textarea rows="10" cols="30" name="sentense" id ="sentense"> </textarea>
+</div>
+</div>
+<div class="form-actions">
+<button type="submit" class="btn btn-primary">添加</button>
+</div>
+</fieldset>
+</form>

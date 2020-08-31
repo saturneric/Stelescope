@@ -1,0 +1,29 @@
+<% if (!iflogin) { %>
+<div class="hero-unit">
+<h1>欢迎来到 DEIH</h1>
+<p>您已在阅读中积累了 <%- n_words %> 个单词, 您还有 <%- r_words %> 个单词需要复习</p>
+<p>
+<a class="btn btn-primary btn-large" href="/login">添加单词</a>
+<a class="btn btn-large" href="/reg">复习单词</a>
+</p>
+</div>
+<% } else { %>
+
+
+
+<% } %>
+<div class="row">
+<div class="span4">
+<h2>哥白尼 说</h2>
+<p>人的天职在勇于探索真理.</p>
+</div>
+<div class="span4">
+<h2>阿拉戈 说</h2>
+<p>
+如果我们不是时时刻刻都看见物体在坠落,那引力对我们来说就会是一种非常奇怪的现象了.</p>
+</div>
+<div class="span4">
+<h2>卡尔.萨根 说</h2>
+<p>每个人在他们幼年的时候都是科学家,因为每个孩子都和科学家一样,对自然界的奇观满怀着好奇和敬畏.</p>
+</div>
+</div>
